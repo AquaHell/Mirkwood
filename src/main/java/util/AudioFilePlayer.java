@@ -39,7 +39,7 @@ public class AudioFilePlayer {
 	}
 	
 	private void play() {
-		URL urlfile = getClass().getResource(file);
+		URL urlfile = getClass().getClassLoader().getResource(file);
 		final File file = new File(urlfile.getFile()).getAbsoluteFile();
 		try (final AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(file)) {
 

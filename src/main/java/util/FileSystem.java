@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 
 public class FileSystem {
 	public static StringBuilder readFile(Class cs, String file) throws IOException {
-		InputStream in = cs.getResourceAsStream("/assets/" + file); 
+		InputStream in = cs.getClassLoader().getResourceAsStream(file); 
 		BufferedReader reader = new BufferedReader(new InputStreamReader(in));
 	    String         line = null;
 	    StringBuilder  stringBuilder = new StringBuilder();

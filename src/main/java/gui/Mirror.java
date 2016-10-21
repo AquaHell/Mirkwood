@@ -149,7 +149,7 @@ public class Mirror {
 			}
 		});
 
-		ap = AudioFilePlayer.getFilePlayer("/assets/myst.ogg");
+		ap = AudioFilePlayer.getFilePlayer("myst.ogg");
 		
 		ap.startPlaying();
 	          

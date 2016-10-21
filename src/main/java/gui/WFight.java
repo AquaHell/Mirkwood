@@ -38,10 +38,10 @@ public class WFight extends BasicWindow {
 	    setTitle("Fight to survive!");
 	    setHints(Arrays.asList(Window.Hint.CENTERED));
 	    
-	    bkg_music = AudioFilePlayer.getFilePlayer("/assets/fightMusic.ogg");
+	    bkg_music = AudioFilePlayer.getFilePlayer("fightMusic.ogg");
 	    bkg_music.startPlaying();
 	    
-	    AudioFilePlayer.getFilePlayer("/assets/jump.ogg").startPlaying();
+	    AudioFilePlayer.getFilePlayer("jump.ogg").startPlaying();
 	    
 	    		
 		Panel mPanel = new Panel(new LinearLayout(Direction.VERTICAL));
@@ -109,7 +109,7 @@ public class WFight extends BasicWindow {
 				// TODO Auto-generated method stub
 				_lMoves.setText(String.valueOf(arg1.getCharacter()));
 				if (arg1.getCharacter() == 'h')
-					AudioFilePlayer.getFilePlayer("/assets/hit_op1.ogg").startPlaying();
+					AudioFilePlayer.getFilePlayer("hit_op1.ogg").startPlaying();
 			}
 			
 			public void onInput(Window arg0, KeyStroke arg1, AtomicBoolean arg2) {
