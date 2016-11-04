@@ -1,6 +1,7 @@
 package gui;
 
 import artefactos.LayerFoes;
+import artefactos.LayerGold;
 import artefactos.LayerTrees;
 import artefactos.LayerWater;
 import artefactos.MapLayer;
@@ -61,11 +62,13 @@ public class Map extends Panel {
         LayerTrees trees = new LayerTrees();
         LayerFoes foes = new LayerFoes();
         LayerWater water = new LayerWater();
+        LayerGold gold = new LayerGold();
 
         layers = new ArrayList();
         layers.add(trees);
         layers.add(foes);
         layers.add(water);
+        layers.add(gold);
 
         land = new EmptySpace(new TextColor.RGB(165, 127, 61)) {
             protected ComponentRenderer<EmptySpace> createDefaultRenderer() {
@@ -78,6 +81,9 @@ public class Map extends Panel {
                         /*
 						 * Fill background
                          */
+                        
+                        
+                        
                         graphics.setBackgroundColor(bkgColor);
                         graphics.setModifiers(EnumSet.of(SGR.BOLD));
                         graphics.fill(' ');
@@ -86,7 +92,7 @@ public class Map extends Panel {
                             for (int x = 0; x < COLUMNS; x++) {
                                 for (int y = 0; y < LINES; y++) {
                                     MapObject t = (MapObject) ml.getMap()[x][y];
-                                    if (t != null) {
+                                    if (t != null && canSee(x,y)==true) {
                                         graphics.setBackgroundColor(t.getBackgroundColor());
                                         graphics.setForegroundColor(t.getForegroundColor());
                                         graphics.putString(x, y, String.valueOf(t.getSymbol()));
@@ -94,6 +100,7 @@ public class Map extends Panel {
                                 }
                             }
                         }
+                        
                         /*for (int x = 0; x < COLUMNS; x++) {
                             for (int y = 0; y < LINES; y++) {
                                 Tree2 t = (Tree2) trees.getMap()[x][y];
@@ -197,7 +204,7 @@ public class Map extends Panel {
     }
 
     private boolean canPass(int x, int y) {
-        if (x <0 || y <0 || x >49 || y >15) {
+        if (x < 0 || y < 0 || x > 49 || y > 15) {
             return false;
         } else {
             for (MapLayer ml : layers) {
