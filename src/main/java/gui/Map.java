@@ -197,16 +197,22 @@ public class Map extends Panel {
     }
 
     private boolean canPass(int x, int y) {
-        for (MapLayer ml : layers) {
-            if (ml.getMap()[x][y] != null) {
+        if (x <0 || y <0 || x >49 || y >15) {
+            return false;
+        } else {
+            for (MapLayer ml : layers) {
+                if (ml.getMap()[x][y] != null) {
 
-                MapObject[][] map = ml.getMap();
-                MapObject mo = map[x][y];
-                if (!ml.getMap()[x][y].isWalkthrough()) {
-                    return false;
+                    MapObject[][] map = ml.getMap();
+                    MapObject mo = map[x][y];
+                    if (!ml.getMap()[x][y].isWalkthrough()) {
+                        return false;
+                    }
+
                 }
             }
         }
+
         return true;
     }
 
