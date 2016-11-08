@@ -12,23 +12,23 @@ import java.util.Random;
  *
  * @author Trainerpl022
  */
-public class Orc extends Character {
-private final char FRONHA = '8';
+public class Spider extends Character {
+private final char FRONHA = '#';
     
-    public Orc(){
+    public Spider(){
     super(0,0,0,0);
     
-    setHp(_rand.nextInt(50)+50);
-    setAttack(_rand.nextInt(10)+10);
+    setHp(_rand.nextInt(60)+40);
+    setAttack(_rand.nextInt(12)+8);
     setDefense(_rand.nextInt(10)+10);
     setSymbol(FRONHA);
     
     setBackgroundColor(new TextColor.RGB(0, 0, 0));
-    setForegroundColor(new TextColor.RGB(200, 30, 30));
+    setForegroundColor(new TextColor.RGB(255, 255, 0));
     
     }
     
-    public Orc(int hp,  int attack, int defense) {
+    public Spider(int hp,  int attack, int defense) {
         super(hp, 0, attack, defense);
         
         setSymbol(FRONHA);

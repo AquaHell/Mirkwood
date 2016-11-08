@@ -2,6 +2,7 @@ package gui;
 
 import artefactos.LayerFoes;
 import artefactos.LayerGold;
+import artefactos.LayerPotion;
 import artefactos.LayerTrees;
 import artefactos.LayerWater;
 import artefactos.MapLayer;
@@ -52,7 +53,7 @@ public class Map extends Panel {
 
     public Map(Characters chars) {
         super();
-
+        
         _chars = chars;
         getBasePane();
 
@@ -62,13 +63,14 @@ public class Map extends Panel {
         LayerTrees trees = new LayerTrees();
         LayerFoes foes = new LayerFoes();
         LayerWater water = new LayerWater();
-        LayerGold gold = new LayerGold();
+        //LayerGold gold = new LayerGold();
+        LayerPotion potion = new LayerPotion();
 
         layers = new ArrayList();
         layers.add(trees);
         layers.add(foes);
         layers.add(water);
-        layers.add(gold);
+        layers.add(potion);
 
         land = new EmptySpace(new TextColor.RGB(165, 127, 61)) {
             protected ComponentRenderer<EmptySpace> createDefaultRenderer() {

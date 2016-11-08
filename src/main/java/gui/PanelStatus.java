@@ -1,6 +1,5 @@
 package gui;
 
-
 import java.util.Random;
 
 import com.googlecode.lanterna.TextColor;
@@ -9,68 +8,84 @@ import com.googlecode.lanterna.gui2.GridLayout;
 import com.googlecode.lanterna.gui2.Label;
 import com.googlecode.lanterna.gui2.LinearLayout;
 import com.googlecode.lanterna.gui2.Panel;
+import artefactos.MapObject;
+        
+public class PanelStatus extends Panel {
 
-public class PanelStatus extends Panel{
-	private Panel pStatus;
-	private Label lblHP,
-		lblStamina,
-		lblPower;
-	
-	public PanelStatus() {
-		super(new GridLayout(2));
-		
-		addComponent(new Label("HP"));
-		addComponent(createLabel(lblHP, "HP"));
-		
-		addComponent(new Label("Stamina"));
-		addComponent(createLabel(lblStamina, "Stamina"));
-		
-		addComponent(new Label("Power"));
-		addComponent(createLabel(lblPower, "Power"));
-		
-		
-	}
-	
-	private Label createLabel(Label lblValue, String lbl) {
-		lblValue = new Label(String.valueOf((new Random().nextInt(100))));
-		lblValue.setBackgroundColor(TextColor.ANSI.BLACK);
-		lblValue.setForegroundColor(TextColor.ANSI.YELLOW);
-		
-		return lblValue;
-	}
+    private Panel pStatus;
+    private Label Hp,
+            Stamina,
+            Power,
+            Defense,
+            Gold;
 
-	public Panel getpStatus() {
-		return pStatus;
-	}
+    public PanelStatus() {
+        super(new GridLayout(2));
 
-	public void setpStatus(Panel pStatus) {
-		this.pStatus = pStatus;
-	}
+        addComponent(new Label("HP"));
+        addComponent(createLabel(Hp, "Hp"));
 
-	public Label getLblHP() {
-		return lblHP;
-	}
+        addComponent(new Label("Stamina"));
+        addComponent(createLabel(Stamina, "Stamina"));
 
-	public void setLblHP(Label lblHP) {
-		this.lblHP = lblHP;
-	}
+        addComponent(new Label("Power"));
+        addComponent(createLabel(Power, "Power"));
+        
+        addComponent(new Label("Defense"));
+        addComponent(createLabel(Defense, "Defense"));
 
-	public Label getLblStamina() {
-		return lblStamina;
-	}
+        addComponent(new Label("Gold"));
+        addComponent(createLabel(Gold, "Gold"));
 
-	public void setLblStamina(Label lblStamina) {
-		this.lblStamina = lblStamina;
-	}
+    }
+    
+    private Label createLabel(Label lblValue, String lbl) {
+        lblValue = new Label(String.valueOf((new Random().nextInt(100))));
+        lblValue.setBackgroundColor(TextColor.ANSI.BLACK);
+        lblValue.setForegroundColor(TextColor.ANSI.YELLOW);
+        
+        
+        return lblValue;
+    }
 
-	public Label getLblPower() {
-		return lblPower;
-	}
+    public Panel getpStatus() {
+        return pStatus;
+    }
 
-	public void setLblPower(Label lblPower) {
-		this.lblPower = lblPower;
-	}
-	
-	
+    public void setpStatus(Panel pStatus) {
+        this.pStatus = pStatus;
+    }
+
+    public Label getLblHP() {
+        return Hp;
+    }
+
+    public void setLblHP(Label lblHP) {
+        this.Hp = lblHP;
+    }
+
+    public Label getLblStamina() {
+        return Stamina;
+    }
+
+    public void setLblStamina(Label lblStamina) {
+        this.Stamina = lblStamina;
+    }
+
+    public Label getLblPower() {
+        return Power;
+    }
+
+    public void setLblPower(Label lblPower) {
+        this.Power = lblPower;
+    }
+
+    public Label getLblGold() {
+        return Gold;
+    }
+
+    public void setLblGold(Label Gold) {
+        this.Gold = Gold;
+    }
 
 }

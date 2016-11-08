@@ -6,6 +6,7 @@
 package artefactos;
 
 import com.googlecode.lanterna.TextColor;
+import com.googlecode.lanterna.gui2.Panel;
 import com.googlecode.lanterna.terminal.Terminal;
 import java.util.Random;
 
@@ -13,12 +14,17 @@ import java.util.Random;
  *
  * @author Trainerpl022
  */
-public class MapObject {
+public class MapObject{
     char symbol;
     TextColor.RGB foregroundColor;
     TextColor.RGB backgroundColor;
     
-    Random _rand;
+    boolean walkthrough = true;
+    boolean visible = true;
+    
+    double value;
+    
+    protected Random _rand;
     
     public MapObject() {
         _rand = new Random();
@@ -28,6 +34,7 @@ public class MapObject {
         this.symbol = symbol;
         this.foregroundColor = foregroundColor;
         this.backgroundColor = backgroundColor;
+        
     }
 
     public char getSymbol() {
@@ -53,6 +60,20 @@ public class MapObject {
     public void setBackgroundColor(TextColor.RGB backgroundColor) {
         this.backgroundColor = backgroundColor;
     }
-    
-    
+
+    public boolean isWalkthrough() {
+        return walkthrough;
+    }
+
+    public void setWalkthrough(boolean walkthrough) {
+        this.walkthrough = walkthrough;
+    }
+
+    public boolean isVisible() {
+        return visible;
+    }
+
+    public void setVisible(boolean visible) {
+        this.visible = visible;
+    }    
 }

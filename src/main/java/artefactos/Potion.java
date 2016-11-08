@@ -8,25 +8,22 @@ package artefactos;
 import com.googlecode.lanterna.TextColor;
 import gui.Map;
 import gui.SymbolsMirk;
-import java.util.Random;
 
 /**
  *
- * @author Trainerpl022
+ * @author UserPL022Pc11
  */
-public class Tree2 extends MapObject {
+public class Potion extends MapObject {
 
-    Random green = new Random();
-    
+    public Potion() {
 
+        setSymbol(SymbolsMirk.POTION);
 
-    
-    public Tree2() {
-        super();
-        setSymbol(SymbolsMirk.TREES[_rand.nextInt(SymbolsMirk.TREES.length)]);
-        setForegroundColor(new TextColor.RGB(0, green.nextInt(150)+50, 0));
+        setForegroundColor(new TextColor.RGB(255, 0, 0));
         setBackgroundColor(Map.bkgColor);
         setWalkthrough(true);
+        setVisible(true);
+        
     }
-    
+
 }

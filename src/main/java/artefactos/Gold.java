@@ -9,24 +9,23 @@ import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.TextColor.RGB;
 import gui.Map;
 import gui.SymbolsMirk;
-
+import script.Character;
 
 /**
  *
  * @author Trainerpl022
  */
-public class Water2 extends MapObject {
-    
-    
-    
-    public Water2() {
+public class Gold extends MapObject {
+
+    public Gold() {
         super();
-        
-        setSymbol(SymbolsMirk.WATER[2]);
-        
-        setForegroundColor(new TextColor.RGB(50, 100, 255));
-        setBackgroundColor(new TextColor.RGB(50, 100, 255));
-        setWalkthrough(false);
+
+        setSymbol(SymbolsMirk.GOLD);
+
+        setForegroundColor(new TextColor.RGB(204, 204, 0));
+        setBackgroundColor(Map.bkgColor);
+        setVisible(false);
+
     }
-    
+
 }

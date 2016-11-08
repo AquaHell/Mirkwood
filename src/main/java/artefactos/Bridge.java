@@ -15,18 +15,18 @@ import gui.SymbolsMirk;
  *
  * @author Trainerpl022
  */
-public class Water2 extends MapObject {
+public class Bridge extends MapObject {
     
     
     
-    public Water2() {
+    public Bridge() {
         super();
         
-        setSymbol(SymbolsMirk.WATER[2]);
+        setSymbol(SymbolsMirk.BRIDGE);
         
-        setForegroundColor(new TextColor.RGB(50, 100, 255));
+        setForegroundColor(new TextColor.RGB(255, 255, 255));
         setBackgroundColor(new TextColor.RGB(50, 100, 255));
-        setWalkthrough(false);
+        setWalkthrough(true);
     }
     
 }

@@ -12,10 +12,13 @@ import artefactos.MapObject;
  * @author Trainerpl022
  */
 public abstract class Character extends MapObject {
+
     int hp,
             power,
             attack,
             defense;
+
+    char symbol;
 
     public Character(int hp, int power, int attack, int defense) {
         this.hp = hp;
@@ -54,9 +57,13 @@ public abstract class Character extends MapObject {
 
     public void setDefense(int defense) {
         this.defense = defense;
-    }  
-    
-    public void attack(){}
-    
-    public void defense(){}
+    }
+
+    public char getSymbol() {
+        return symbol;
+    }
+
+    public void setSymbol(char symbol) {
+        this.symbol = symbol;
+    }
 }
