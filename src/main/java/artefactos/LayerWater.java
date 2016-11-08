@@ -16,7 +16,7 @@ public class LayerWater extends MapLayer {
 
     final int LIN = _rand.nextInt(LINES);
     int[] waterpos = new int[LINES];
-    int col = _rand.nextInt(LINES);
+    int col = 1;
 
     public LayerWater() {
         super();
@@ -39,8 +39,13 @@ public class LayerWater extends MapLayer {
     }
 
     public void generateWater() {
-        for (int i = 0; i < LINES; i++) {
-            waterpos[i] = col + (_rand.nextInt(2) - 1);
+        while (col < 2) {
+            col = _rand.nextInt(LINES);
+            if (col > 2) {
+                for (int i = 0; i < LINES; i++) {
+                    waterpos[i] = col + (_rand.nextInt(2) - 1);
+                }
+            }
         }
     }
 }
