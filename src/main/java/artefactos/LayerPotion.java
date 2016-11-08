@@ -14,7 +14,7 @@ import static gui.Map.LINES;
  */
 public class LayerPotion extends MapLayer {
 
-    private final int POTION = 1;
+    private final int POTION = 10;
 
     public LayerPotion() {
         generatePotion();
