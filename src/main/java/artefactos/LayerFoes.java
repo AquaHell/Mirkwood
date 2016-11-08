@@ -13,7 +13,7 @@ import script.Spider;
 /**
  *
  * @author UserPL022Pc11
- */
+ */ 
 public class LayerFoes extends MapLayer {
 
     private final int ORCS = 10;

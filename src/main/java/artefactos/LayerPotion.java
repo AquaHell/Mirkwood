@@ -11,7 +11,7 @@ import static gui.Map.LINES;
 /**
  *
  * @author UserPL022Pc11
- */
+ */ 
 public class LayerPotion extends MapLayer {
 
     private final int POTION = 10;

@@ -12,7 +12,7 @@ import gui.SymbolsMirk;
 /**
  *
  * @author UserPL022Pc11
- */
+ */ 
 public class Potion extends MapObject {
 
     public Potion() {

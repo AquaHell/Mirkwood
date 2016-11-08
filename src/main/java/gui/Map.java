@@ -23,7 +23,7 @@ import com.googlecode.lanterna.gui2.Panel;
 import com.googlecode.lanterna.gui2.TextGUIGraphics;
 import com.googlecode.lanterna.input.KeyStroke;
 import java.util.ArrayList;
-
+ 
 import script.Characters;
 import script.Foe;
 import script.Hero;
