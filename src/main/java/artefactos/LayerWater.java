@@ -41,7 +41,7 @@ public class LayerWater extends MapLayer {
     public void generateWater() {
         while (col < 2) {
             col = _rand.nextInt(LINES);
-            if (col > 2) {
+            if (col > 2 || col < 12) {
                 for (int i = 0; i < LINES; i++) {
                     waterpos[i] = col + (_rand.nextInt(2) - 1);
                 }
