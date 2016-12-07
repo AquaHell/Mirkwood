@@ -160,10 +160,11 @@ public class Mirror {
 	}
 	
 	public void musicStatus(boolean status) {
-		if (status)
+	/*	if (status)
 			ap.startPlaying();
 		else 
 			ap.stop();
+            */
 	}
 	
 	/*

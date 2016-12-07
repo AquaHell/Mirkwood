@@ -12,7 +12,7 @@ public class Characters {
 	public Characters() {
 		super();
 		
-		hero = new Hero("Sir Guinetti", new TerminalPosition(2, Map.LINES-2));
+		hero = new Hero("Sir Guinetti", new TerminalPosition(5, 5));
 		foe = new Foe("Sauron", new TerminalPosition(Map.COLUMNS-2, 2));
 	}
 
